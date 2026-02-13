@@ -47,7 +47,7 @@ def start_log(): #this starts recording data, and creates a new CSV file.
     log_path = os.path.join("logs", f"run_{ts}.csv") #full file path (name)
     log_file = open(log_path, "w", buffering=1) #opens the file in write mode, so it can write the data in the file.
     log_file.write("time,lx,ly,rx,ry,zl,zr,buttons\n") #formats the data in the file.
-    print(f"✅ RECORDING STARTED -> {log_path}") #just prints so I know it's recording
+    print(f"🔴 RECORDING STARTED -> {log_path}") #just prints so I know it's recording
     node.ui_pub.publish(String(data="RECORDING STARTED")) #prints this to the UI
 
 
@@ -56,7 +56,7 @@ def stop_log(): #this function stops recording the data, and closes the CSV file
     if log_file: #this checks if there is an open file
         log_file.close() #this closes the CSV file.
         log_file = None #this sets log_file to back none, to show that there is no file open.
-    print("🛑 RECORDING STOPPED") #prints it stopped recording so I know
+    print("RECORDING STOPPED") #prints it stopped recording so I know
     log_path = None #no active log anymore
 
 # fixed loop rate
