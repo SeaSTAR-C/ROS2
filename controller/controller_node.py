@@ -8,7 +8,7 @@ from datetime import datetime #creates files w/ date and time
 
 #this remembers that if the buttons were pressed on the last loop so it only reacts once per press
 #if these arent here it'll print button x was pressed like 15 times per press.
-#I know i can put 3 quotes at the top and three at the button if my comments are multiple lines
+#I know i can put 3 quotes at the top and three at the bottom if my comments are multiple lines
 #but if i do that then my comment becomes bright green and it looks like code, I like it to be grey.
 b0_was_down = False #debounce for button 0
 b1_was_down = False #debounce for button 1 
